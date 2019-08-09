@@ -1,9 +1,10 @@
 import React from "react";
+import RecommendationForm from "../components/RecommendationForm";
 
 const Recommendation: React.FC<Recommendation> = () => {
     return (
         <div>
-            Input
+            <RecommendationForm />
         </div>
     )
 }
