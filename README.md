@@ -1,10 +1,28 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## General description
+
+This is a small application tied to [simple-api](https://github.com/szpone/simple-api). It uses its API to display
+simple data. You have to run both client-simpe and simple-api in
+order to use all features of this application. Instructions on running simple-api can be found in its README.
+
+## Storybook
+
+Storybook is a tool for creating components in isolation and can act as a portfolio of all components in
+different states. It also eases development process. To start story book run:
+
+### `npm storybook`
+or
+### `yarn storybook`
+
+
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm start` 
+or
+### `yarn start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -12,10 +30,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
+### `npm start` 
+or
+### `yarn start`
+
+
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Note that also this command starts Storybook tests.
+
 
 ### `npm run build`
 
