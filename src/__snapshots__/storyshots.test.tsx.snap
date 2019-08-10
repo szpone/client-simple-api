@@ -20,3 +20,33 @@ exports[`Storyshots components.Header with text 1`] = `
   </h2>
 </div>
 `;
+
+exports[`Storyshots components.ResultCard with data 1`] = `
+<div>
+  <div
+    className="card"
+  >
+    <div
+      className="card-body"
+    >
+      <div
+        className="card-title h5"
+      >
+        A very nice card
+      </div>
+      <div
+        className="card-subtitle h6"
+      >
+         
+        2019-01-2000
+      </div>
+      <a
+        className="card-link"
+        href="https://www.xkcd.com/1270/"
+      >
+        Source
+      </a>
+    </div>
+  </div>
+</div>
+`;

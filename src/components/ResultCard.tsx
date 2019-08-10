@@ -8,7 +8,7 @@ const ResultCard: React.FC<ResultsContainer> = props => {
             <Card>
                 <Card.Body>
                     <Card.Title>{props.newsTitle}</Card.Title>
-                    <Card.Subtitle> {props.newsTitle}</Card.Subtitle>
+                    <Card.Subtitle> {props.date}</Card.Subtitle>
                     <Card.Link href={props.link}>Source</Card.Link>
                 </Card.Body>
             </Card>
