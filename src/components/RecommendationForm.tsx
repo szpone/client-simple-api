@@ -1,10 +1,12 @@
 import React, {useState} from "react";
 import useForm from 'react-hook-form'
+import FormButton from "./FormButton";
+import { Form } from 'react-bootstrap';
 
 
 const RecommendationForm: React.FC<any> = () => {
-    const [value, setValue] = useState<string>("");
-    const { register, handleSubmit, watch, errors} = useForm();
+    const [values, setValues] = useState<any>("");
+    const { register, handleSubmit } = useForm();
     const onSubmit = (data: Record<string, any>) => {
         fetch("http://localhost:8000/recommendations", {
             method: "POST",
@@ -18,25 +20,26 @@ const RecommendationForm: React.FC<any> = () => {
                     return response.json()
                 }
                 throw new Error("Error! " + response.statusText)
-
             })
-            .then(res => JSON.stringify(res.message))
-            .catch(error => setValue(error.message))
+            .then(res => {
+                setValues(res.message)
+            })
+            .catch(error => setValues(error.message))
     };
 
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <div>
-                    <label>Search text</label>
-                </div>
-                <div>
-                <input type="text" name="text" defaultValue="Search text" ref={register} />
-                </div>
-                <input type="submit" />
-            </form>
+            <Form onSubmit={handleSubmit(onSubmit)}>
+                <Form.Group controlId="searchText">
+                    <Form.Label>Search text</Form.Label>
+                    <Form.Control type="text" name="text" ref={register} />
+                </Form.Group>
+                <FormButton variant="primary" type="submit" content="Send"/>
+            </Form>
 
-            <div>{ value }</div>
+            <div>
+                { values }
+            </div>
         </div>
     )
 };

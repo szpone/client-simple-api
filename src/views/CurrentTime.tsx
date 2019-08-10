@@ -1,4 +1,5 @@
 import React, { useEffect, useState} from 'react';
+import Header from "../components/Header";
 
 const CurrentTime: React.FC<Homepage> = () => {
     const [currentTime, setCurrentTime] = useState<Promise<any>>();
@@ -12,10 +13,9 @@ const CurrentTime: React.FC<Homepage> = () => {
             })
     });
 
-
     return (
         <div>
-            <h1> No watch? No problem! Here's current time! </h1>
+            <Header content={"No watch? No problem! Here's current time!"}/>
 
             <div>{ currentTime }</div>
         </div>
