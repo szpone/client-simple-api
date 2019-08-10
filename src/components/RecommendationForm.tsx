@@ -9,6 +9,8 @@ const RecommendationForm: React.FC<any> = () => {
     const [values, setValues] = useState<Array<Record<string, any>>>([{}]);
     const [isVisible, setVisible] = useState<boolean>(false);
     const { register, handleSubmit, errors } = useForm();
+
+
     const onSubmit = (data: Record<string, any>) => {
         fetch("http://localhost:8000/recommendations", {
             method: "POST",
@@ -24,13 +26,12 @@ const RecommendationForm: React.FC<any> = () => {
                 throw new Error("Error! " + response.statusText)
             })
             .then(res => {
-                setValues(res)
+                setValues(res);
+                setVisible(true);
 
             })
             .catch(error => setValues(error.message))
-    }
-
-
+    };
 
     return (
         <div>
@@ -45,10 +46,11 @@ const RecommendationForm: React.FC<any> = () => {
 
                 { isVisible &&
 
-                    values.map((val: Record<string, any>) =>
+                    values.map((val: Record<string, any>, index: any) =>
                         <ResultCard newsTitle={val.title}
                                     date={val.published}
                                     link={val.url}
+                                    key={index}
                         />)
                 }
         </div>

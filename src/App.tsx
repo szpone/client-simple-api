@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import Container from "react-bootstrap/es/Container";
-import Row from "react-bootstrap/es/Row";
-import Col from "react-bootstrap/es/Col";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import CurrentTime from "./views/CurrentTime";
 import Recommendation from "./views/Recommendation";
 
