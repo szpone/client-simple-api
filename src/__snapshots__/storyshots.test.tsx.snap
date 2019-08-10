@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots components.Button with text 1`] = `
+<div>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    type="submit"
+  >
+    I am a primary button
+  </button>
+</div>
+`;
+
+exports[`Storyshots components.Header with text 1`] = `
+<div>
+  <h2>
+     
+    I'm a header
+  </h2>
+</div>
+`;
+
+exports[`Storyshots components.ResultCard with data 1`] = `
+<div>
+  <div
+    className="card"
+  >
+    <div
+      className="card-body"
+    >
+      <div
+        className="card-title h5"
+      >
+        A very nice card
+      </div>
+      <div
+        className="card-subtitle h6"
+      >
+         
+        2019-01-2000
+      </div>
+      <a
+        className="card-link"
+        href="https://www.xkcd.com/1270/"
+      >
+        Source
+      </a>
+    </div>
+  </div>
+</div>
+`;

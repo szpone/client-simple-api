@@ -1,0 +1,7 @@
+interface Homepage {
+    
+}
+
+interface Recommendation {
+    
+}
