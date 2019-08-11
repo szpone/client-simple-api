@@ -3,8 +3,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## General description
 
 This is a small application tied to [simple-api](https://github.com/szpone/simple-api). It uses its API to display
-simple data. You have to run both client-simpe and simple-api in
+simple data. You have to run both client-simple-api and simple-api in
 order to use all features of this application. Instructions on running simple-api can be found in its README.
+
+## Getting yarn
+
+Instead of using npm, you can use yarn. Installation instructions can be found [here](https://yarnpkg.com/en/docs/install#debian-stable)
+
+
 
 ## Storybook
 
